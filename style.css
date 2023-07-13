@@ -9,8 +9,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    background-color: black;
+    min-height: 400px;
 }
 .container {
     width: 80%;
@@ -41,11 +44,17 @@ header nav {
     display: flex;
     column-gap: 2em;
 }
+.menu ul li {
+    list-style: none;
+}
 .menu ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.5em;
 
+}
+.menu ul li a:hover {
+    color: #0ba2c0;;
 }
 .menu .menu-button a {
     color: #0ba2c0;;
@@ -59,11 +68,49 @@ header nav {
     border-radius: .4em;
     border: 1px white solid;
 }
-.menu ul li {
-    list-style: none;
+.menu .menu-button:hover {
+    background-color: #fff;
+    border: 1px black solid;
+    transition: .5s;
 }
-
 /* Header CSS Codes End */
+/* Section CSS Codes Start */
+.content {
+    color: white;
+    height: 100%;
+    padding: 6rem 0;
+    text-align: center;
+}
+.content h1 {
+    font-size: 4rem;
+    margin: 2rem;
+}
+.content p {
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem ;
+}
+.section-buttons a {
+    background-color: rgba(220, 220, 220, 0.467);
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 15rem;
+    font-size: 1.5em;
+    
+}
+.section-buttons a:hover {
+   background-color: #fff;
+   color: black;
+   transition: .5s;
+}
+/* Section CSS Codes End */
 
 /* Responsive CSS Codes Start */
 @media (max-width: 724px) {
@@ -83,6 +130,22 @@ display: none; }
     .container .menu ul li a {
         font-size: 1em;
     }
+    
+    .content {
+        padding: 3rem 0;
     }
-
+    .content h1 {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    .content p {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    .section-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /* Responsive CSS Codes End */
